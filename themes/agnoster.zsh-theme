@@ -145,6 +145,8 @@ prompt_hg() {
 
 # Dir: current working directory
 prompt_dir() {
+  # dire="`basename \`pwd\``"
+  # prompt_segment blue black "$dire"
   prompt_segment blue black '%~'
 }
 
@@ -175,7 +177,7 @@ build_prompt() {
   RETVAL=$?
   prompt_status
   prompt_virtualenv
-  prompt_context
+  # prompt_context
   prompt_dir
   prompt_git
   prompt_hg
